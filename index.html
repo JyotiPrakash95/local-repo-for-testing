@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+  /* today */
+#sync2 .owl-item:nth-child(1) {
+    background-color: var(--primary);
+    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+}
+#sync2 .owl-item:nth-child(2) {
+    background-color: var(--orange);
+    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+}
+#sync2 .owl-item:nth-child(3) {
+    background-color: var(--green);
+    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+}
+#sync2 .owl-item:nth-child(4) {
+    background-color: var(--blue);
+    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+	position:relative;
+}
+#sync2 .owl-item:after {
+	position: absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+    background-color:#e2582b63;
+	z-index:-1;
+	display:block;
+	transition:all 0.5s;
+}
+#sync2 .owl-item:first-child:after {
+	    background-color:rgba(92,45,144,0.7) ;
+}
+#sync2 .owl-item:nth-child(2):after {
+	    background-color:rgba(242,148,29,0.7);
+}
+#sync2 .owl-item:nth-child(3):after {
+	    background-color:rgba(0,121,63,0.7);
+}
+#sync2 .owl-item:last-child:after {
+	    background-color:rgba(4,111,162,0.7);
+}
+/* hover */
+#sync2 .owl-item:first-child:hover:after {
+	    background-color:rgba(92,45,144,0.9) ;
+}
+#sync2 .owl-item:nth-child(2):hover:after {
+	    background-color:rgba(242,148,29,0.9);
+}
+#sync2 .owl-item:nth-child(3):hover:after {
+	    background-color:rgba(0,121,63,0.9);
+}
+#sync2 .owl-item:last-child:hover:after {
+	    background-color:rgba(4,111,162,0.9);
+}
+#sync2 .current .owl-item:active:after {
+	background-color:transparent
+}
+#sync2 .owl-item.current:after {
+	display:none
+}
+
+#sync2 .owl-item.current .item p {
+	display:none !important
+}
+.heaadernav ul#primary-menu li a.nav-link:after{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary);
+    bottom: 0;
+    left: 41%;
+    border: 5px solid var(
+    --white);
+    top: 92%;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+	display:block;
+    transform: scale(0);}
+.heaadernav ul#primary-menu li a.nav-link:hover:after{    transform: scale(1);}
+
+
+//media query
+@media(max-width:325px){
+	#sliders .owl-item{max-width:150px
+	}
+	.pre-footer .footlinks ul{display:inline-block}
+	.pre-footer .footlinks ul li a, .pre-footer p{
+		padding:5px;
+		font-size:14px;
+	}
+}
+
+</style>
+</head>
+<body>
+
+<p>The paragraph.</p>
+</body>
+</html>
