@@ -1,119 +1,67 @@
+<!-- product slider -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style> 
-  /* today */
-#sync2 .owl-item:nth-child(1) {
-    background-color: var(--primary);
-    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-}
-#sync2 .owl-item:nth-child(2) {
-    background-color: var(--orange);
-    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-}
-#sync2 .owl-item:nth-child(3) {
-    background-color: var(--green);
-    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-}
-#sync2 .owl-item:nth-child(4) {
-    background-color: var(--blue);
-    background-image: url(https://www.food-kings.de/images/Slider/foodkings_aboutus.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-	position:relative;
-}
-#sync2 .owl-item:after {
-	position: absolute;
-  content:"";
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-    background-color:#e2582b63;
-	z-index:-1;
-	display:block;
-	transition:all 0.5s;
-}
-#sync2 .owl-item:first-child:after {
-	    background-color:rgba(92,45,144,0.7) ;
-}
-#sync2 .owl-item:nth-child(2):after {
-	    background-color:rgba(242,148,29,0.7);
-}
-#sync2 .owl-item:nth-child(3):after {
-	    background-color:rgba(0,121,63,0.7);
-}
-#sync2 .owl-item:last-child:after {
-	    background-color:rgba(4,111,162,0.7);
-}
-/* hover */
-#sync2 .owl-item:first-child:hover:after {
-	    background-color:rgba(92,45,144,0.9) ;
-}
-#sync2 .owl-item:nth-child(2):hover:after {
-	    background-color:rgba(242,148,29,0.9);
-}
-#sync2 .owl-item:nth-child(3):hover:after {
-	    background-color:rgba(0,121,63,0.9);
-}
-#sync2 .owl-item:last-child:hover:after {
-	    background-color:rgba(4,111,162,0.9);
-}
-#sync2 .current .owl-item:active:after {
-	background-color:transparent
-}
-#sync2 .owl-item.current:after {
-	display:none
-}
-
-#sync2 .owl-item.current .item p {
-	display:none !important
-}
-.heaadernav ul#primary-menu li a.nav-link:after{
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: var(--primary);
-    bottom: 0;
-    left: 41%;
-    border: 5px solid var(
-    --white);
-    top: 92%;
-    border-radius: 50%;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s;
-	display:block;
-    transform: scale(0);}
-.heaadernav ul#primary-menu li a.nav-link:hover:after{    transform: scale(1);}
-
-
-//media query
-@media(max-width:325px){
-	#sliders .owl-item{max-width:150px
-	}
-	.pre-footer .footlinks ul{display:inline-block}
-	.pre-footer .footlinks ul li a, .pre-footer p{
-		padding:5px;
-		font-size:14px;
-	}
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Slider</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<style>
+    .owl-carousel .owl-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+        .owl-carousel .owl-dots {
+        display: none; /* Hide the navigation dots */
+    }
+    .item{
+    background-color:gray;
+    padding:30px;
+    border-radius:20px}
 
 </style>
 </head>
 <body>
 
-<p>The paragraph.</p>
+<div class="owl-carousel owl-theme">
+    <div class="item"><img src="image1.jpg" alt="Image 1">
+    <h2>this is heading</h2></div>
+    <div class="item"><img src="image2.jpg" alt="Image 2"><h2>this is heading</h2></div>
+    <div class="item"><img src="image3.jpg" alt="Image 3"><h2>this is heading</h2></div>
+    <div class="item"><img src="image4.jpg" alt="Image 4"><h2>this is heading</h2></div>
+    <div class="item"><img src="image5.jpg" alt="Image 5"><h2>this is heading</h2></div>
+    <div class="item"><img src="image6.jpg" alt="Image 6"><h2>this is heading</h2></div>
+    <!-- Add more items as needed -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 4,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000, // Change slide every 3 seconds
+            autoplayHoverPause: true,
+            margin: 10,
+            nav: false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
